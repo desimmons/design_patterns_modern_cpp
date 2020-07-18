@@ -1,2 +1,3 @@
 # design_patterns_modern_cpp
-Reusable approaches for Object-Oriented Software Design
+
+This repository contains examples from the book "Design Patterns in Modern C++" by Dmitri Nesteruk, 2018. Each directory corresponds to the topics covered in each of the chapters presented by the book.
