@@ -23,7 +23,6 @@ public:
   }
 };
 
-
 int main(int argc, char** argv)
 {
   Base base;
