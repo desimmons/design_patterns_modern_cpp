@@ -1,62 +1,32 @@
 #include <iostream>
-using namespace std;
+#include <memory>
 
-struct Number
+template <class T>
+class Derived : T
 {
-  typedef int value_type;
-  int n;
-  void set(int v)
+public:
+  void bar()
   {
-    n = v;
-  }
-  int get() const
-  {
-    return n;
+    this->foo();
   }
 };
 
-template <typename Base, typename T = typename Base::value_type>
-struct Undoable : public Base
+class Base
 {
-  typedef T value_type;
-  T before;
-  void set(T v)
+public:
+  virtual ~Base() = default;
+
+  void foo()
   {
-    before = Base::get();
-    Base::set(v);
-  }
-  void undo()
-  {
-    Base::set(before);
+    std::string hello{ "Hello world\n" };
+    std::cout << hello;
   }
 };
 
-template <typename Base, typename T = typename Base::value_type>
-struct Redoable : public Base
-{
-  typedef T value_type;
-  T after;
-  void set(T v)
-  {
-    after = v;
-    Base::set(v);
-  }
-  void redo()
-  {
-    Base::set(after);
-  }
-};
 
-typedef Undoable<Redoable<Number> > ReUndoableNumber;
-
-int main()
+int main(int argc, char** argv)
 {
-  ReUndoableNumber mynum;
-  mynum.set(42);
-  mynum.set(84);
-  cout << mynum.get() << '\n';  // 84
-  mynum.undo();
-  cout << mynum.get() << '\n';  // 42
-  mynum.redo();
-  cout << mynum.get() << '\n';  // back to 84
+  Base base;
+  Derived<Base> derived;
+  derived.bar();
 }
