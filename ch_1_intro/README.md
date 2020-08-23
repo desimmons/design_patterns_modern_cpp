@@ -12,3 +12,14 @@ The best reading material I have found for the continuously recuring template pa
 ## Mixin Inheritance
 
 A good explanation of mixin inheritance can be found [here](https://www.fluentcpp.com/2017/12/12/mixin-classes-yang-crtp/). Mixin inheritance achieves a very similar effect to CRTP. Whereas CRTP allows for core functionality to be to be inherited via inheritance from a base class, mixin inheritance allows generic functionality to be wrapped around your type. See `mixin.cpp` for an example of mixin inheritance.
+
+## SOLID
+
+From [Wikipedia](https://en.wikipedia.org/wiki/SOLID), SOLID is a mnemonic acronym for five design principles intended to make software designs more understandable, flexible and maintainable. These principles are:
+1. *S*ingle responsibility.
+2. *O*pen-closed principle.
+3. *L*iskov substitution.
+4. *I*nterface segregation.
+5. *D*ependency inversion.
+
+![SOLID](https://i.pinimg.com/originals/8a/53/36/8a53363bd595a8af11822020a9342b02.jpg)
