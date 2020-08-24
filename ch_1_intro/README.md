@@ -16,10 +16,5 @@ A good explanation of mixin inheritance can be found [here](https://www.fluentcp
 ## SOLID
 
 From [Wikipedia](https://en.wikipedia.org/wiki/SOLID), SOLID is a mnemonic acronym for five design principles intended to make software designs more understandable, flexible and maintainable. These principles are:
-1. *S*ingle responsibility.
-2. *O*pen-closed principle.
-3. *L*iskov substitution.
-4. *I*nterface segregation.
-5. *D*ependency inversion.
 
 ![SOLID](https://i.pinimg.com/originals/8a/53/36/8a53363bd595a8af11822020a9342b02.jpg)
